@@ -380,6 +380,8 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                               ${widget.htmlEditorOptions.customOptions}
                               $summernoteCallbacks
                           });
+
+                          \$('.note-statusbar').hide();
                           
                           \$('#summernote-2').on('summernote.change', function(_, contents, \$editable) {
                             window.flutter_inappwebview.callHandler('onChangeContent', contents);
